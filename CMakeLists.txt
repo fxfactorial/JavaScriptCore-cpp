@@ -26,6 +26,8 @@ install(TARGETS JavaScriptCore-C++ DESTINATION /usr/lib)
 install(FILES
 
   include/JavaScriptCore-C++.h
+  include/virtual_machine.h
+  include/context.h
 
   DESTINATION
   include/JavaScriptCore-C++)

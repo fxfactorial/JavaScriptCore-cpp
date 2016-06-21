@@ -7,9 +7,9 @@
 #include <JavaScriptCore/JavaScript.h>
 #endif
 
-#include "JavaScriptCore-C++.h"
+#include "context.h"
 
-jsc::VirtualMachine::VirtualMachine()
+jsc::Context::Context()
 {
-  std::cout << "Hello, created Virtual Machine\n";
+  std::cout << "Hello, created Context\n";
 }

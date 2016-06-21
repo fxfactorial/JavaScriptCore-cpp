@@ -1,6 +1,5 @@
-/* -*- c++ -*- */
-#ifndef JAVASCRIPTCORE_CXX_H
-#define JAVASCRIPTCORE_CXX_H
+#include <iostream>
+#include <string>
 
 #ifdef __APPLE__
 #include <JavaScriptCore/JavaScriptCore.h>
@@ -9,6 +8,8 @@
 #endif
 
 #include "virtual_machine.h"
-#include "context.h"
 
-#endif
+jsc::VirtualMachine::VirtualMachine()
+{
+  std::cout << "Hello, created Virtual Machine\n";
+}
