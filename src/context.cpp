@@ -9,7 +9,7 @@
 
 #include "context.h"
 
-jsc::Context::Context()
+Context::Context()
 {
   std::cout << "Hello, created Context\n";
 }

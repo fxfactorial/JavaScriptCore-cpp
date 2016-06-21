@@ -9,7 +9,7 @@
 
 #include "virtual_machine.h"
 
-jsc::VirtualMachine::VirtualMachine()
+VirtualMachine::VirtualMachine()
 {
   std::cout << "Hello, created Virtual Machine\n";
 }
