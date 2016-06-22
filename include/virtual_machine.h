@@ -12,16 +12,18 @@
 
 #include "context.h"
 
-class Context;
+namespace jsc {
 
-class VirtualMachine {
-private:
-  JSContextGroupRef m_group;
-  std::map<JSGlobalContextRef, Context> m_context_cache;
+  class Context;
 
-public:
-  VirtualMachine();
-};
+  class VirtualMachine {
+  private:
+    JSContextGroupRef m_group;
+    std::map<JSGlobalContextRef, Context> m_context_cache;
 
+  public:
+    VirtualMachine();
+  };
 
+}
 #endif

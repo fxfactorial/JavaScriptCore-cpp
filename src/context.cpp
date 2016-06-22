@@ -9,7 +9,6 @@
 
 #include "context.h"
 
-Context::Context()
-{
-  std::cout << "Hello, created Context\n";
-}
+jsc::Context::Context() :
+  m_virtual_machine(new VirtualMachine)
+{ }

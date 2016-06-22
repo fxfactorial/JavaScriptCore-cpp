@@ -10,13 +10,15 @@
 
 #include "virtual_machine.h"
 
-class VirtualMachine;
+namespace jsc {
 
-class Context {
-private:
-  VirtualMachine *m_virtual_machine;
-public:
-  Context();
-};
+  class VirtualMachine;
 
+  class Context {
+  private:
+    VirtualMachine *m_virtual_machine;
+  public:
+    Context();
+  };
+}
 #endif
