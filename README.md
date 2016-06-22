@@ -30,3 +30,6 @@ and when using in your library:
 ```shell
 $ clang++ -lJavaScriptCore-C++ -I/usr/include/webkitgtk-3.0 test.cpp
 ```
+
+see the example Makefile and program usage in then `example`
+directory.
