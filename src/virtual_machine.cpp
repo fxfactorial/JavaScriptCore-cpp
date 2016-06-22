@@ -11,12 +11,24 @@
 
 jsc::VirtualMachine::VirtualMachine() :
   m_group(JSContextGroupCreate()),
-  m_context_cache(std::map<JSGlobalContextRef, Context>())
+  m_context_cache(std::map<JSGlobalContextRef, Context*>())
 {
-  std::cout << "Hello, created Virtual Machine\n";
 }
 
 jsc::VirtualMachine::~VirtualMachine()
 {
   JSContextGroupRelease(m_group);
+  std::cout << "Deleted VirtualMachine\n";
+}
+
+void
+jsc::VirtualMachine::add_context(Context *c, JSGlobalContextRef glbctx)
+{
+  m_context_cache[glbctx] = c;
+}
+
+jsc::Context*
+jsc::VirtualMachine::context_from_global_context(JSGlobalContextRef ctx)
+{
+  return m_context_cache[ctx];
 }

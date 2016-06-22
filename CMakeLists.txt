@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.2.2)
 project(JavaScriptCore-C++)
 set(CMAKE_BUILD_TYPE Release)
 
@@ -6,7 +6,9 @@ include_directories(include)
 
 SET(CMAKE_CXX_COMPILER "clang++")
 SET(CMAKE_CXX_FLAGS
-  "${CMAKE_CXX_FLAGS} -fblocks -std=c++11 -Wall -stdlib=libc++")
+  "${CMAKE_CXX_FLAGS} -fblocks \
+-std=c++11 -Wall -Wextra \
+-Wpedantic -stdlib=libc++ -g")
 
 file(GLOB SOURCES "src/*.cpp")
 
@@ -21,7 +23,9 @@ if (APPLE)
   target_link_libraries(JavaScriptCore-C++ ${EXTRA_LIBS})
   install(TARGETS JavaScriptCore-C++ DESTINATION /usr/local/lib)
 else ()
-  TARGET_INCLUDE_DIRECTORIES(JavaScriptCore-C++ PUBLIC "/usr/include/webkitgtk-3.0")
+  TARGET_INCLUDE_DIRECTORIES(JavaScriptCore-C++
+    PUBLIC
+    "/usr/include/webkitgtk-3.0")
   TARGET_LINK_LIBRARIES(JavaScriptCore-C++
     # Our needed libraries
     javascriptcoregtk-3.0

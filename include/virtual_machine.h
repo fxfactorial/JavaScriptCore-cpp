@@ -17,13 +17,14 @@ namespace jsc {
   class Context;
 
   class VirtualMachine {
-  private:
-    JSContextGroupRef m_group;
-    std::map<JSGlobalContextRef, Context> m_context_cache;
-
   public:
+    JSContextGroupRef m_group;
     VirtualMachine();
     ~VirtualMachine();
+    void add_context(Context *, JSGlobalContextRef);
+    Context* context_from_global_context(JSGlobalContextRef);
+  private:
+    std::map<JSGlobalContextRef, Context*> m_context_cache;
   };
 
 }

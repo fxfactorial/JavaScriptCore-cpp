@@ -26,7 +26,7 @@ namespace jsc {
 
   public:
     Context(void);
-    ~Context(void);
+    ~Context();
     Context(VirtualMachine*);
     Value* evaluate_script(std::string, std::string);
     Context* current_context(void) const;
