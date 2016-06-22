@@ -23,6 +23,7 @@ namespace jsc {
 
   public:
     VirtualMachine();
+    ~VirtualMachine();
   };
 
 }
