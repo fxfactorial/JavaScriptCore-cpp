@@ -17,6 +17,8 @@ namespace jsc {
   class Context {
   private:
     VirtualMachine *m_virtual_machine;
+    JSGlobalContextRef m_context;
+
   public:
     Context();
   };

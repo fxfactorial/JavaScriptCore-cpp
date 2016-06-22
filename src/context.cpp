@@ -11,4 +11,7 @@
 
 jsc::Context::Context() :
   m_virtual_machine(new VirtualMachine)
-{ }
+  // m_context(JSGloba)
+{
+  std::cout << "Created a VM: " << m_virtual_machine << "\n";
+}

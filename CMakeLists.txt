@@ -36,3 +36,9 @@ install(FILES
 
   DESTINATION
   include/JavaScriptCore-C++)
+
+enable_testing()
+add_executable(basic_api_usage example/example.cpp)
+target_include_directories(basic_api_usage PUBLIC "/usr/local")
+TARGET_LINK_LIBRARIES(basic_api_usage JavaScriptCore-C++)
+add_test(basic_api_usage_test basic_api_usage)
