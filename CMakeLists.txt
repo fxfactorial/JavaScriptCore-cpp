@@ -4,7 +4,9 @@ set(CMAKE_BUILD_TYPE Release)
 
 include_directories(include)
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
+SET(CMAKE_CXX_COMPILER "clang++")
+SET(CMAKE_CXX_FLAGS
+  "${CMAKE_CXX_FLAGS} -fblocks -std=c++11 -Wall -stdlib=libc++")
 
 file(GLOB SOURCES "src/*.cpp")
 
@@ -33,6 +35,7 @@ install(FILES
   include/JavaScriptCore-C++.h
   include/virtual_machine.h
   include/context.h
+  include/value.h
 
   DESTINATION
   include/JavaScriptCore-C++)

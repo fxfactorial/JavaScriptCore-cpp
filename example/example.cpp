@@ -2,6 +2,7 @@
 
 int main(void)
 {
-  jsc::VirtualMachine handle;
+  // jsc::VirtualMachine handle;
+  auto handle = new jsc::Context;
   return 0;
 }

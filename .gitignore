@@ -7,5 +7,6 @@ install_manifest.txt
 CTestTestfile.cmake
 libJavaScriptCore-C++.so
 libJavaScriptCore-C++.dylib
-example/Programbasic_api_usage
+example/Program
+basic_api_usage
 Testing/

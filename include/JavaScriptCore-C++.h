@@ -10,5 +10,6 @@
 
 #include "virtual_machine.h"
 #include "context.h"
+#include "value.h"
 
 #endif

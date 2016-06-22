@@ -8,10 +8,26 @@
 #endif
 
 #include "context.h"
+#include "value.h"
 
-jsc::Context::Context() :
-  m_virtual_machine(new VirtualMachine)
-  // m_context(JSGloba)
+jsc::Context::Context()
 {
-  std::cout << "Created a VM: " << m_virtual_machine << "\n";
+  std::cout << "Alloc context\n";
+  global_object = nullptr;
+}
+
+jsc::Context::~Context()
+{
+  std::cout << "Dealloc\n";
+}
+
+jsc::Context::Context(VirtualMachine *const vm)
+{
+  std::cout << "Hello world\n";
+}
+
+jsc::Value*
+jsc::Context::evaluate_script(std::string script, std::string source_url="/")
+{
+  return nullptr;
 }
